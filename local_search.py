@@ -102,7 +102,9 @@ def excercise_2():
 
     for _ in range(MAX_ITER_EXPERIMENT):
         print(f"\n\nExperiment number: {_ + 1}\n")
-        best_solution = first_improvement_local_search(starting_point, m, N_1)
+        # best_solution = first_improvement_local_search(starting_point, m, N_1)
+        # best_solution2 = first_improvement_local_search(starting_point, m, N_2)
+        best_solution3 = first_improvement_local_search(starting_point, m, N_3)
 
 def main():
     # # Example usage
