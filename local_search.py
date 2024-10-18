@@ -96,13 +96,12 @@ def save_results(eval_values, dimensions, execution_time, iteration):
         file.write(f"Execution time: {execution_time:.6f} seconds\n")
 
 def excercise_2():
-    dimensions = N_2
+    dimensions = N_3
     starting_point = (1 << (BITS_PER_DIMENSION * dimensions)) - 1  # Initial solution (all bits set to 1 for N_1 dimensions)
     m = 4  # Perturbation factor
 
     for _ in range(MAX_ITER_EXPERIMENT):
         print(f"\n\nExperiment number: {_ + 1}\n")
-
         start_time = time.time()
         # Execute the local search
         __ , evaluation_values = first_improvement_local_search(starting_point, m, dimensions)
@@ -110,6 +109,7 @@ def excercise_2():
         execution_time = end_time - start_time
         save_results(evaluation_values, dimensions, execution_time, _)
         print(f"Execution time for experiment {_ + 1}: {execution_time:.6f} seconds")
+
 
 def main():
     # Runs the experiment
